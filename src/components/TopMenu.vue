@@ -29,7 +29,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="item-github" target="_blank">
+                            <a href="https://github.com/FilipQL/OVS-Mesh-Script-Generator" class="item-github" target="_blank">
                                 <i class="fa fa-github fa-fw"></i>
                                 GitHub
                             </a>
