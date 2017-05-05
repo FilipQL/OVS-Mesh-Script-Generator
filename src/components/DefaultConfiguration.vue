@@ -6,7 +6,7 @@
                 <input type="text" class="form-control" name="default_controller" id="default_controller" placeholder="e.g. tcp:127.0.0.1:6633"
                        :value="default_controller" @change="changeDefaultController"
                        data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"
-                       data-content="In order for the change to take effect, change the focus or press Enter."
+                       data-content="In order for new value to take effect, change the focus or press Enter."
                 >
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <input type="text" class="form-control" name="default_listen" id="default_listen" placeholder="e.g. ptcp:6634"
                        :value="default_listen" @change="changeDefaultListen"
                        data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"
-                       data-content="In order for the change to take effect, change the focus or press Enter."
+                       data-content="In order for new value to take effect, change the focus or press Enter."
                 >
             </div>
         </div>
@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" name="default_ofv" id="default_ofv" placeholder="e.g. OpenFlow13"
                        :value="default_ofv" @change="changeDefaultOfv"
                        data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"
-                       data-content="In order for the change to take effect, change the focus or press Enter."
+                       data-content="In order for new value to take effect, change the focus or press Enter."
                 >
             </div>
         </div>
