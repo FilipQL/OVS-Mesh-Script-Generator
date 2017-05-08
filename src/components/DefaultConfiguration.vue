@@ -67,6 +67,8 @@
              */
             changeDefaultController(e) {
                 var newDefaultController = e.target.value.trim();
+
+                _network.storePositions();
                 var nodeIds = _nodes.getIds();
 
                 nodeIds.forEach(function(currentValue) {
@@ -89,6 +91,8 @@
              */
             changeDefaultListen(e) {
                 var newDefaultListen = e.target.value.trim();
+
+                _network.storePositions();
                 var nodeIds = _nodes.getIds();
 
                 nodeIds.forEach(function(currentValue) {
@@ -111,6 +115,8 @@
              */
             changeDefaultOfv(e) {
                 var newDefaultOfv = e.target.value.trim();
+
+                _network.storePositions();
                 var nodeIds = _nodes.getIds();
 
                 nodeIds.forEach(function(currentValue) {
