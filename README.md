@@ -1,6 +1,6 @@
 # OVS-Mesh Script Generator
 
-> An OpenFlow playground with OVS: A homemade Mininet alternative
+> OpenFlow playground with OVS: A homemade Mininet alternative
 
 OVS-Mesh Script Generator was developed using [Vue.js](https://github.com/vuejs/vue) framework and [Vis.js](https://github.com/almende/vis) visualization library. 
 - More details (Guide): https://laraget.com/blog/ovs-mesh-script-generator.
