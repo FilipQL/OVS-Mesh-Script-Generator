@@ -614,7 +614,7 @@
             },
 
             /**
-             * Update the switch-to-switch matrix in the bash scrip (decrease the # of links between switches nodeOne
+             * Update the switch-to-switch matrix in the bash script (decrease the # of links between switches nodeOne
              * and nodeTwo).
              */
             decreaseS2SLinks(nodeOne, nodeTwo) {
@@ -627,7 +627,7 @@
             },
 
             /**
-             * Update the host-to-switch matrix in the bash scrip (increase the # of links between host and switch).
+             * Update the host-to-switch matrix in the bash script (increase the # of links between host and switch).
              */
             increaseH2SLinks(host, sw) {
                 this.h2s_matrix[host.index][sw.index]++;
@@ -636,7 +636,7 @@
             },
 
             /**
-             * Update the host-to-switch matrix in the bash scrip (decrease the # of links between host and switch).
+             * Update the host-to-switch matrix in the bash script (decrease the # of links between host and switch).
              */
             decreaseH2SLinks(host, sw) {
                 this.h2s_matrix[host.index][sw.index]--;
