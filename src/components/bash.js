@@ -74,7 +74,7 @@ do
 done
 
 # If you want something different than values specified in DEFAULT_CONTROLLER, DEFAULT_LISTEN and DEFAULT_OFv
-# for one or more OVS instances, this is the place make that change. For example:
+# for one or more OVS instances, this is the to place make that change. For example:
 
 # CONTROLLER[7]="tcp:147.91.1.83:6699"
 # LISTEN[5]="ptcp:6635"
@@ -93,7 +93,7 @@ do
     do
         if [ "$i" -gt "$j" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # Practically NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -130,7 +130,7 @@ do
     do
         if [ "$i" -gt "$j" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # Practically NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -151,7 +151,7 @@ do
     do
         if [ "$i" -gt "$j" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # Practically NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -175,7 +175,7 @@ for i in $(eval echo {00..$M})
 do
     for j in $(eval echo {00..$N})
     do
-        NUM_OF_CABLES=$(echo \${HOSTS[$i]} | cut -d' ' -f\`expr $j + 1\`) # Practically NUM_OF_CABLES=HOSTS[i][j]
+        NUM_OF_CABLES=$(echo \${HOSTS[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=HOSTS[i][j]
         if [ "$NUM_OF_CABLES" != "0" ]
         then
             for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -195,7 +195,7 @@ done
 # You can even get the full access to the host by running the shell of your choice:
 # ip netns exec Host-03 bash
 # ifconfig 192.168.0.3 netmask 255.255.255.0
-# exit # To leave the host
+# exit # Return to the main host
 
 echo "Press Ctrl-C to exit..."
 
