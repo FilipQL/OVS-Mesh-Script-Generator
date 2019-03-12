@@ -91,9 +91,9 @@ for i in $(eval echo {00..$N})
 do
     for j in $(eval echo {00..$N})
     do
-        if [ "$i" -gt "$j" ]
+        if [ "\${i#0}" -gt "\${j#0}" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[\${i#0}]} | cut -d' ' -f\`expr \${j#0} + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -120,7 +120,7 @@ trap "clean_up $N $M" EXIT
 sleep 3 # sometimes needed for /etc/rc.local
 
 echo -e "\\n(Re-)creating OVS instances..."
-for i in $(eval echo {00..$N}); do ovs-vsctl -- --id=@sw$ic0 create Controller target=\\"\${CONTROLLER[$i]}\\" max_backoff=1000 -- --id=@sw$i-listen create Controller target=\\"\${LISTEN[$i]}\\" max_backoff=1000 -- --if-exists del-br sw$i -- add-br sw$i -- set bridge sw$i controller=[@sw$ic0,@sw$i-listen] other_config:datapath-id=00000000000000$i fail_mode=secure other-config:disable-in-band=true protocols=\${OFv[$i]}; done
+for i in $(eval echo {00..$N}); do ovs-vsctl -- --id=@sw$ic0 create Controller target=\\"\${CONTROLLER[\${i#0}]}\\" max_backoff=1000 -- --id=@sw$i-listen create Controller target=\\"\${LISTEN[\${i#0}]}\\" max_backoff=1000 -- --if-exists del-br sw$i -- add-br sw$i -- set bridge sw$i controller=[@sw$ic0,@sw$i-listen] other_config:datapath-id=00000000000000$i fail_mode=secure other-config:disable-in-band=true protocols=\${OFv[\${i#0}]}; done
 echo "The list of OVS instances is: "\`ovs-vsctl list-br | tr '\\n' ' '\`
 
 echo -e "\\nInstantiating virtual crossover cables..."
@@ -128,9 +128,9 @@ for i in $(eval echo {00..$N})
 do
     for j in $(eval echo {00..$N})
     do
-        if [ "$i" -gt "$j" ]
+        if [ "\${i#0}" -gt "\${j#0}" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[\${i#0}]} | cut -d' ' -f\`expr \${j#0} + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -149,9 +149,9 @@ for i in $(eval echo {00..$N})
 do
     for j in $(eval echo {00..$N})
     do
-        if [ "$i" -gt "$j" ]
+        if [ "\${i#0}" -gt "\${j#0}" ]
         then
-            NUM_OF_CABLES=$(echo \${SW[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=SW[i][j]
+            NUM_OF_CABLES=$(echo \${SW[\${i#0}]} | cut -d' ' -f\`expr \${j#0} + 1\`) # NUM_OF_CABLES=SW[i][j]
             if [ "$NUM_OF_CABLES" != "0" ]
             then
                 for k in $(eval echo {1..$NUM_OF_CABLES})
@@ -175,7 +175,7 @@ for i in $(eval echo {00..$M})
 do
     for j in $(eval echo {00..$N})
     do
-        NUM_OF_CABLES=$(echo \${HOSTS[$i]} | cut -d' ' -f\`expr $j + 1\`) # NUM_OF_CABLES=HOSTS[i][j]
+        NUM_OF_CABLES=$(echo \${HOSTS[\${i#0}]} | cut -d' ' -f\`expr \${j#0} + 1\`) # NUM_OF_CABLES=HOSTS[i][j]
         if [ "$NUM_OF_CABLES" != "0" ]
         then
             for k in $(eval echo {1..$NUM_OF_CABLES})
