@@ -1,6 +1,6 @@
 {
   "name": "ovs-mesh-script-generator",
-  "description": "An OpenFlow playground with OVS: A homemade Mininet alternative",
+  "description": "OpenFlow playground with OVS: A homemade Mininet alternative",
   "version": "1.0.0",
   "author": "Filip Zdravkovic <dbsajt@gmail.com>",
   "private": true,
