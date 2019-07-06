@@ -1,12 +1,13 @@
 {
   "name": "ovs-mesh-script-generator",
-  "description": "OpenFlow playground with OVS: A homemade Mininet alternative",
+  "description": "An OpenFlow playground with OVS: A homemade Mininet alternative",
   "version": "1.0.0",
   "author": "Filip Zdravkovic <dbsajt@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "docker": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --public localhost:8080 --hot"
   },
   "dependencies": {
     "clipboard": "^1.6.1",
