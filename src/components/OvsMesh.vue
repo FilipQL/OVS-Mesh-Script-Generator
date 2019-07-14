@@ -140,7 +140,7 @@
                  * The initial data are consistent with the VIS INITIAL DATA/CONFIGURATION (see main.js), and when a user
                  * changes some of these (from DefaultConfiguration.vue) - it will be immediately updated.
                  */
-                default_controller: 'tcp:127.0.0.1:6633',
+                default_controller: 'tcp:127.0.0.1:6653',
                 default_listen: 'ptcp:6634',
                 default_ofv: 'OpenFlow13',
 
@@ -148,7 +148,7 @@
                  * These arrays contain information on the controllers, listens and  Open Flow versions for each switch, respectively.
                  * The initial data are consistent with the VIS INITIAL DATA/CONFIGURATION (see main.js).
                  */
-                controllers: ['tcp:127.0.0.1:6633', 'tcp:127.0.0.1:6633', 'tcp:127.0.0.1:6633', 'tcp:127.0.0.1:6633', 'tcp:127.0.0.1:6633'],
+                controllers: ['tcp:127.0.0.1:6653', 'tcp:127.0.0.1:6653', 'tcp:127.0.0.1:6653', 'tcp:127.0.0.1:6653', 'tcp:127.0.0.1:6653'],
                 listens: ['ptcp:6634', 'ptcp:6634', 'ptcp:6634', 'ptcp:6634', 'ptcp:6634'],
                 ofvs: ['OpenFlow13', 'OpenFlow13', 'OpenFlow13', 'OpenFlow13', 'OpenFlow13'],
 
