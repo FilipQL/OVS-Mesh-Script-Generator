@@ -14,7 +14,7 @@ window.eventHub = new Vue();
  * @private
  */
 window._defaultConfiguration = {
-    controller: 'tcp:127.0.0.1:6633',
+    controller: 'tcp:127.0.0.1:6653',
     listen: 'ptcp:6634',
     ofv: 'OpenFlow13'
 };
@@ -29,11 +29,11 @@ window._defaultConfiguration = {
  * @private
  */
 window._nodes = new vis.DataSet([
-    { id: 0, index: 0, group: 'switch', label: 'sw00', x: -147, y: -77, controller: 'tcp:127.0.0.1:6633', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
-    { id: 1, index: 1, group: 'switch', label: 'sw01', x: -186, y: 88, controller: 'tcp:127.0.0.1:6633', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
-    { id: 2, index: 2, group: 'switch', label: 'sw02', x: 8, y: 160, controller: 'tcp:127.0.0.1:6633', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
-    { id: 3, index: 3, group: 'switch', label: 'sw03', x: 159, y: 28, controller: 'tcp:127.0.0.1:6633', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
-    { id: 4, index: 4, group: 'switch', label: 'sw04', x: 45, y: -111, controller: 'tcp:127.0.0.1:6633', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
+    { id: 0, index: 0, group: 'switch', label: 'sw00', x: -147, y: -77, controller: 'tcp:127.0.0.1:6653', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
+    { id: 1, index: 1, group: 'switch', label: 'sw01', x: -186, y: 88, controller: 'tcp:127.0.0.1:6653', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
+    { id: 2, index: 2, group: 'switch', label: 'sw02', x: 8, y: 160, controller: 'tcp:127.0.0.1:6653', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
+    { id: 3, index: 3, group: 'switch', label: 'sw03', x: 159, y: 28, controller: 'tcp:127.0.0.1:6653', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
+    { id: 4, index: 4, group: 'switch', label: 'sw04', x: 45, y: -111, controller: 'tcp:127.0.0.1:6653', listen: 'ptcp:6634', ofv: 'OpenFlow13' },
 
     { id: 5, index: 0, group: 'host', label: 'Host-00', x: -257.5, y: -58.5 },
     { id: 6, index: 1, group: 'host', label: 'Host-01', x: 193.75, y: -68.55 }
