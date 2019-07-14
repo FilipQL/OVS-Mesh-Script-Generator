@@ -29,6 +29,6 @@ Use the following if you already have Docker installed on your desktop and wish 
 # this may take some time to complete...
 sudo docker image build -t ovs-mesh .
 
-# point your browser to the http://localhost:8080/
+# point your browser to http://localhost:8080/
 sudo docker run -p 127.0.0.1:8080:8080 ovs-mesh
 ```
