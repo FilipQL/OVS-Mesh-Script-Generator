@@ -18,7 +18,7 @@
 
                     <div class="form-group" v-show="nodeTypeFlag">
                         <label for="node-controller">Controller:</label>
-                        <input type="text" class="form-control" id="node-controller" placeholder="e.g. tcp:127.0.0.1:6633">
+                        <input type="text" class="form-control" id="node-controller" placeholder="e.g. tcp:127.0.0.1:6653">
                     </div>
 
                     <div class="form-group" v-show="nodeTypeFlag">
