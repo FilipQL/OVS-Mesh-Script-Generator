@@ -3,7 +3,7 @@
         <div class="col-md-4">
             <div class="input-group">
                 <span class="input-group-addon">Default Controller</span>
-                <input type="text" class="form-control" name="default_controller" id="default_controller" placeholder="e.g. tcp:127.0.0.1:6633"
+                <input type="text" class="form-control" name="default_controller" id="default_controller" placeholder="e.g. tcp:127.0.0.1:6653"
                        :value="default_controller" @change="changeDefaultController"
                        data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus"
                        data-content="In order for new value to take effect, change the focus or press Enter."
@@ -39,7 +39,7 @@
     export default {
         data() {
             return {
-                default_controller: 'tcp:127.0.0.1:6633',
+                default_controller: 'tcp:127.0.0.1:6653',
                 default_listen: 'ptcp:6634',
                 default_ofv: 'OpenFlow13'
             }
